@@ -90,39 +90,39 @@ function MainApp() {
   };
 
   return (
-    <div className="dashboard-no-sidebar">
-      <header className="dashboard-header-top">
-        <div className="dashboard-header-left">
-          <div className="dashboard-greeting">Hello, {username}</div>
+    <div className="dashboard">
+    <div className="systemname">LINK TRACKER</div>
+      <header className="header">
+        <div className="headerLeft">
+          <div className="UserGreeting">Hello, {username}</div>
         </div>
-        <div className="system-name">LINK TRACKER</div>
-        <div className="dashboard-header-right">
-          <span className="dashboard-time">{currentTime}</span>
-          <button className="dashboard-logout" onClick={handleLogout}>Logout</button>
+        <div className="headerRight">
+          <span className="time"><strong>{currentTime}</strong></span>
+          <button className="logoutBtn" onClick={handleLogout}>Logout</button>
         </div>
       </header>
-      <main className="dashboard-main">
-        <div className="crud-row">
-          <div className={`crud-box${activeCrud === 'create' ? ' active' : ''}`} onClick={() => setActiveCrud('create')}>
+      <main className="dashboardCrud">
+        <div className="crudItems">
+          <div className={`crudBox${activeCrud === 'create' ? ' active' : ''}`} onClick={() => setActiveCrud('create')}>
             <span role="img" aria-label="Create" style={{fontSize: '1.7em', display: 'block', marginBottom: '0.3em'}}>➕</span>
             Create
           </div>
-          <div className={`crud-box${activeCrud === 'read' ? ' active' : ''}`} onClick={() => setActiveCrud('read')}>
+          <div className={`crudBox${activeCrud === 'read' ? ' active' : ''}`} onClick={() => setActiveCrud('read')}>
             <span role="img" aria-label="Read" style={{fontSize: '1.7em', display: 'block', marginBottom: '0.3em'}}>📖</span>
             Read
           </div>
-          <div className={`crud-box${activeCrud === 'update' ? ' active' : ''}`} onClick={() => setActiveCrud('update')}>
+          <div className={`crudBox${activeCrud === 'update' ? ' active' : ''}`} onClick={() => setActiveCrud('update')}>
             <span role="img" aria-label="Update" style={{fontSize: '1.7em', display: 'block', marginBottom: '0.3em'}}>✏️</span>
             Update
           </div>
-          <div className={`crud-box${activeCrud === 'delete' ? ' active' : ''}`} onClick={() => setActiveCrud('delete')}>
+          <div className={`crudBox${activeCrud === 'delete' ? ' active' : ''}`} onClick={() => setActiveCrud('delete')}>
             <span role="img" aria-label="Delete" style={{fontSize: '1.7em', display: 'block', marginBottom: '0.3em'}}>🗑️</span>
             Delete
           </div>
         </div>
         {activeCrud === 'create' && (
-          <section className="dashboard-section">
-            <div className="dashboard-section-title">Add Link</div>
+          <section className="operations">
+            <div className="operationsTitle">ADD LINK</div>
             <form
               className="link-form"
               onSubmit={e => {

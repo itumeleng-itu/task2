@@ -1,6 +1,6 @@
-/* Modern minimalist black/white dashboard, inspired by auth.css */
-.dashboard-no-sidebar {
+.dashboard {
   background: #fff;
+  border: 2px solid black;
   border-radius: 2.2rem;
   box-shadow: 0 4px 32px rgba(0,0,0,0.09);
   max-width: 1100px;
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
 }
-.dashboard-header-top {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,114 +20,113 @@
   position: relative;
   gap: 0;
 }
-.dashboard-header-left {
+.headerLeft {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   min-width: 180px;
 }
-.system-name {
-  font-size: 2.7rem;
-  font-weight: 900;
-  letter-spacing: 3px;
-  color: #111;
+.systemname {
+  font-size: 2.8rem;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  color: #000000;
   text-align: center;
-  flex: 1;
-  z-index: 1;
-  text-transform: uppercase;
+
 }
-.dashboard-header-right {
+.headerRight {
   display: flex;
   align-items: center;
   gap: 1.2rem;
   min-width: 180px;
   justify-content: flex-end;
 }
-.dashboard-greeting {
+.UserGreeting {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 900;
   color: #111;
   text-align: left;
+  position: relative;
+  top:20px;
   margin-bottom: 2rem;
+
 }
-.dashboard-time {
+.time {
   font-size: 1.1rem;
   color: #111;
   font-weight: 500;
 }
-.dashboard-main {
+.dashboardCrud {
   flex: 1;
   padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   background: #fff;
   min-width: 0;
   color: #111;
 }
-.crud-row {
+.crudItems {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
   justify-content: center;
 }
-.crud-box {
+.crudBox {
   flex: 1 1 120px;
-  background: #fff;
-  color: #111;
-  border: 2.5px solid #111;
-  border-radius: 1.2rem;
-  font-size: 1.18rem;
-  font-weight: 700;
-  text-align: center;
-  padding: 1.3rem 0.5rem;
-  cursor: pointer;
-  transition: background 0.18s, color 0.18s, border 0.18s;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.7rem;
-}
-.crud-box.active, .crud-box:hover {
-  background: #111;
-  color: #fff;
-  border: 2.5px solid #111;
-}
-.dashboard-logout {
-  background: #fff;
+  background: #ffffff;
   color: #111;
   border: 2px solid #111;
-  border-radius: 10px;
-  padding: 0.7rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  margin-top: auto;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 1.3rem 0.5rem;
+  box-shadow: 1px 1px 3px black;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
-.dashboard-logout:hover {
+.crudBox.active {
   background: #111;
   color: #fff;
 }
-.dashboard-section {
-  margin-bottom: 2.5rem;
+.crudBox:hover {
+    background: #111;
+    color: #fff;
+}
+.logoutBtn {
   background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  padding: 1.5rem 1.5rem 1.7rem 1.5rem;
-  border: 1.5px solid #111;
-}
-.dashboard-section-title {
-  font-size: 1.18rem;
-  font-weight: 800;
   color: #111;
-  margin-bottom: 1.1rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 1000;
 }
-.dashboard-container {
+
+.logoutBtn:hover {
+  background: #111;
+  color: #fff;
+}
+.operations {
+  margin-bottom: 2.5rem;
+  background: #000000;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 4px black;
+  padding: 1.5rem 1.5rem 1.7rem 1.5rem;
+  border: 3px solid #000000;
+}
+.operationsTitle {
+  font-size: 1.18rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.LINK-FORM {
   max-width: 900px;
   margin: 2.5rem auto;
   padding: 2rem 1.5rem 2.5rem 1.5rem;
-  background: #fff;
+  background: #c62424;
   border-radius: 2.2rem;
   box-shadow: 0 4px 32px rgba(0,0,0,0.09);
 }
