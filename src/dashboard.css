@@ -1,0 +1,256 @@
+/* Modern minimalist black/white dashboard, inspired by auth.css */
+.dashboard-no-sidebar {
+  background: #fff;
+  border-radius: 2.2rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.09);
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  min-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 3rem 2.2rem 3rem;
+  background: #fff;
+  border-bottom: 2px solid #111;
+  position: relative;
+  gap: 0;
+}
+.dashboard-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-width: 180px;
+}
+.system-name {
+  font-size: 2.7rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #111;
+  text-align: center;
+  flex: 1;
+  z-index: 1;
+  text-transform: uppercase;
+}
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-width: 180px;
+  justify-content: flex-end;
+}
+.dashboard-greeting {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.dashboard-time {
+  font-size: 1.1rem;
+  color: #111;
+  font-weight: 500;
+}
+.dashboard-main {
+  flex: 1;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  background: #fff;
+  min-width: 0;
+  color: #111;
+}
+.crud-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+.crud-box {
+  flex: 1 1 120px;
+  background: #fff;
+  color: #111;
+  border: 2.5px solid #111;
+  border-radius: 1.2rem;
+  font-size: 1.18rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.3rem 0.5rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.crud-box.active, .crud-box:hover {
+  background: #111;
+  color: #fff;
+  border: 2.5px solid #111;
+}
+.dashboard-logout {
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: auto;
+}
+.dashboard-logout:hover {
+  background: #111;
+  color: #fff;
+}
+.dashboard-section {
+  margin-bottom: 2.5rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  padding: 1.5rem 1.5rem 1.7rem 1.5rem;
+  border: 1.5px solid #111;
+}
+.dashboard-section-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.dashboard-container {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  background: #fff;
+  border-radius: 2.2rem;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.09);
+}
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.dashboard-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.link-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.link-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  border: 2px solid #111;
+}
+.link-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.link-card-title:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.link-card-desc {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.link-card-tags {
+  margin-bottom: 0.7rem;
+}
+.link-card-tag {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.3rem;
+  font-size: 0.92rem;
+  border: 1.5px solid #111;
+}
+.link-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.link-card-btn {
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.link-card-btn:hover {
+  background: #fff;
+  color: #111;
+}
+.link-card-btn.delete {
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+}
+.link-card-btn.delete:hover {
+  background: #111;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .dashboard-no-sidebar {
+    max-width: 100vw;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+  .dashboard-header-top {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    gap: 0.7rem;
+    position: static;
+  }
+  .system-name {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .dashboard-header-left,
+  .dashboard-header-right {
+    min-width: 0;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  .dashboard-main {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .crud-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .crud-box {
+    font-size: 1rem;
+    padding: 0.9rem 0.5rem;
+  }
+}
