@@ -199,25 +199,25 @@ function MainApp() {
                 onChange={e => setSearch(e.target.value)}
               />
             </div>
-            <div className="link-card-list">
+            <div className="linkCard">
               {filteredLinks.length === 0 ? (
                 <div className="empty">No links to update.</div>
               ) : (
                 filteredLinks.map(link => (
-                  <div className="link-card" key={link.id}>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="link-card-title">
+                  <div className="card" key={link.id}>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="cardTitle">
                       {link.title}
                     </a>
-                    <div className="link-card-desc">{link.description}</div>
+                    <div className="describe">{link.description}</div>
                     {link.tags && link.tags.length > 0 && (
-                      <div className="link-card-tags">
+                      <div className="tags">
                         {link.tags.map((tag, i) => (
-                          <span className="link-card-tag" key={i}>{tag}</span>
+                          <span className="tag" key={i}>{tag}</span>
                         ))}
                       </div>
                     )}
-                    <div className="link-card-actions">
-                      <button className="link-card-btn" onClick={() => setEditing(link)}>Edit</button>
+                    <div className="actions">
+                      <button className="cardbutton" onClick={() => setEditing(link)}>Edit</button>
                     </div>
                   </div>
                 ))
@@ -225,7 +225,7 @@ function MainApp() {
             </div>
             {editing && (
               <form
-                className="link-form"
+                className="form"
                 style={{ marginTop: '1.5rem' }}
                 onSubmit={e => {
                   e.preventDefault();
