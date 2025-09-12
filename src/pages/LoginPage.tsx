@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './auth.css';
-// Replace '../assets/logo.png' with the actual image file you want to use
 import logo from '../assets/images/Minimalist Abstract Art.png';
 
 export default function LoginPage() {
@@ -22,15 +21,16 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="container">
-      <div className="image">
+    <div className="authContainer">
+      <div className="authImage">
         <img src={logo} alt="Login visual" />
       </div>
       <div className="formContainer">
-        <h2>Login</h2>
-        <form onSubmit={handleLogin}>
+        <h2 className="formTitle">Login</h2>
+        <form className="formElement" onSubmit={handleLogin}>
           <input
             type="email"
+            className="formInput"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -38,18 +38,20 @@ export default function LoginPage() {
           />
           <input
             type="password"
+            className="formInput"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Login</button>
+          <button type="submit" className="formButton">Login</button>
         </form>
-        {error && <div className="error-msg">{error}</div>}
-        <p>
-          Don't have an account?{' '}
+        {error && <div className="errorMessage">{error}</div>}
+        <p className="formText">
+          Don&apos;t have an account?{' '}
           <a
             href="/signup"
+            className="formLink"
             onClick={(e) => {
               e.preventDefault();
               navigate('/signup');

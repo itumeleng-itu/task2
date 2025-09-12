@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './auth.css';
 import logo from '../assets/images/Minimalist Abstract Art.png';
 
-
 export default function SignupPage() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -29,16 +28,16 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-image">
-        {/* You can replace this with your image or background */}
+    <div className="authContainer">
+      <div className="authImage">
         <img src={logo} alt="Signup visual" />
       </div>
-      <div className="auth-form-container">
-        <h2>Sign Up</h2>
-        <form onSubmit={handleSignup}>
+      <div className="formContainer">
+        <h2 className="formTitle">Sign Up</h2>
+        <form className="formElement" onSubmit={handleSignup}>
           <input
             type="text"
+            className="formInput"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -46,6 +45,7 @@ export default function SignupPage() {
           />
           <input
             type="email"
+            className="formInput"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -53,18 +53,20 @@ export default function SignupPage() {
           />
           <input
             type="password"
+            className="formInput"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Sign Up</button>
+          <button type="submit" className="formButton">Sign Up</button>
         </form>
-        {error && <div className="error-msg">{error}</div>}
-        <p>
+        {error && <div className="errorMessage">{error}</div>}
+        <p className="formText">
           Already have an account?{' '}
           <a
             href="/login"
+            className="formLink"
             onClick={(e) => {
               e.preventDefault();
               navigate('/login');
